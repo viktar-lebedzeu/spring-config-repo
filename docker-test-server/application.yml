@@ -1,3 +1,9 @@
 ## Spring cloud configuration file
 application:
   description: "Docker test Server module"
+
+zuul:
+  routes:
+    entry:
+      path: /entry/**
+      serviceId: docker-test-entry
