@@ -1,6 +1,6 @@
 ## Spring cloud configuration file
 application:
-  description: "Docker test Server module"
+  descriptionMessage: "Docker test Server module"
 
 zuul:
   routes:

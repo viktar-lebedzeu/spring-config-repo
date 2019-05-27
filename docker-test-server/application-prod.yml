@@ -1,2 +1,2 @@
 application:
-  description: "Docker test Server module (PROD)"
+  descriptionMessage: "Docker test Server module (PROD)"
