@@ -2,6 +2,21 @@
 application:
   descriptionMessage: "Docker test Server module"
 
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    proxyHost: docker-test-eureka-service
+    eurekaServerPort: 8761
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://${eureka.client.proxyHost}:${eureka.client.eurekaServerPort}/eureka}
+
 zuul:
   routes:
     entry:
