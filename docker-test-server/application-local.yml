@@ -1,0 +1,7 @@
+## Spring cloud configuration file
+application:
+  descriptionMessage: "Docker test Server module (LOCAL)"
+
+eureka:
+  client:
+    proxyHost: localhost
