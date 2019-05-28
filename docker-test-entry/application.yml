@@ -1,0 +1,17 @@
+application:
+  descriptionMessage: "Docker test entry point module"
+
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    proxyHost: localhost
+    eurekaServerPort: 8761
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://${eureka.client.proxyHost}:${eureka.client.eurekaServerPort}/eureka}
