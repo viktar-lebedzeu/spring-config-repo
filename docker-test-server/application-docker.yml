@@ -1,0 +1,7 @@
+## Spring cloud configuration file
+application:
+  descriptionMessage: "Docker test Server module (DOCKER)"
+
+eureka:
+  client:
+    proxyHost: docker-test-eureka-service
